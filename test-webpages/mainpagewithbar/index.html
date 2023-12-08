@@ -40,6 +40,31 @@
         .TitleHeader {
             font-weight: bold;
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #fff;
+            padding: 8px;
+            text-align: left;
+        }
+
+        a {
+            color: #00f; /* Set link color to blue, you can customize it */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .mirror-image {
+            width: 20px; /* Adjust the width of the image */
+            height: auto;
+            margin-right: 5px; /* Adjust the margin as needed */
+        }
     </style>
 </head>
 <body>
@@ -62,6 +87,30 @@
         <h1>Welcome to Your Web Page</h1>
         <p>This is a simple example. You can customize it further based on your needs.</p>
     </main>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Game Name</th>
+                <th>Size</th>
+                <th>Mirrors</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                    <img class="mirror-image" src="googledrive.jpg" alt="Google Drive">
+                    <a href="#">Google Drive</a>,
+                    <img class="mirror-image" src="onedrive.png" alt="Onedrive">
+                    <a href="#">Onedrive</a>
+            </tr>
+            <tr>
+                <td>Game 2</td>
+                <td>1.5 GB</td>
+                <td>Mirror 1</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
 
 </body>
 </html>
