@@ -7,6 +7,7 @@
     <style>
         :root {
             --onedrive-color: rgb(20, 144, 223);
+            --google-color: linear-gradient(to right, #00ff00, #0000ff, #ffff00); /* Used a gradient to match with the three main colors of the google drive logo */
         }
         body {
             margin: 0;
@@ -103,16 +104,33 @@
             background-color: #333;
             outline: 2px solid var(--onedrive-color);
         }
+
+        .mirror-button-gdrive {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background-color: var(--google-color);
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, outline 0.3s;
+            outline: none;
+        }
+
+        .mirror-button-gdrive:hover {
+            background-color: var(--google-color);
+            outline: 2px solid purple;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="rr.png" alt="Logo">
+        <img src="logo.png" alt="Reapr RPKS Logo">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="https://fortnbreak.github.io/test-webpages/mainpagewithbar/">Home</a>
+            <a href="https://fortnbreak.github.io/test-webpages/mainpagewithbar/about">About</a>
+            <a href="https://fortnbreak.github.io/test-webpages/mainpagewithbar/contact">Contact</a>
             <!-- Add more links as needed -->
         </nav>
     </header>
@@ -139,11 +157,11 @@
                 <td>2 GB</td>
                 <td>
                     <div>
-                        <img class="mirror-image" src="googledrive.jpg" alt="Google Drive">
-                        <a class="mirror-button" href="#">Google Drive</a>
+                        <img class="mirror-image" src="googledrive.jpg" alt="Google Drive Logo">
+                        <a class="mirror-button-gdrive" href="#">Google Drive</a>
                     </div>
                     <div>
-                        <img class="mirror-image" src="onedrive.png" alt="Onedrive">
+                        <img class="mirror-image" src="onedrive.png" alt="Onedrive Logo">
                         <a class="mirror-button-onedrive" href="#">Onedrive</a>
                     </div>
                 </td>
