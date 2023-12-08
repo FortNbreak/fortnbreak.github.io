@@ -65,6 +65,24 @@
             height: auto;
             margin-right: 5px; /* Adjust the margin as needed */
         }
+
+        
+        .mirror-button {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background-color: purple;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, outline 0.3s;
+            outline: none;
+        }
+
+        .mirror-button:hover {
+            background-color: #333;
+            outline: 2px solid purple;
+        }
     </style>
 </head>
 <body>
@@ -102,11 +120,11 @@
                 <td>
                     <div>
                         <img class="mirror-image" src="googledrive.jpg" alt="Google Drive">
-                        <a href="#">Google Drive</a>
+                        <a class="mirror-button" href="#">Google Drive</a>
                     </div>
                     <div>
                         <img class="mirror-image" src="onedrive.png" alt="Onedrive">
-                        <a href="#">Onedrive</a>
+                        <a class="mirror-button" href="#">Google Drive</a>
                     </div>
                 </td>
             </tr>
