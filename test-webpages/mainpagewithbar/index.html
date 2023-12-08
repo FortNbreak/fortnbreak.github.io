@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPRRPKS</title>
     <style>
+        :root {
+            --onedrive-color: rbg(20, 144, 223);
+        }
         body {
             margin: 0;
             padding: 0;
@@ -88,7 +91,7 @@
             display: inline-block;
             padding: 8px 16px;
             border-radius: 12px;
-            background-color: blue;
+            background-color: var(--onedrive-color);
             color: #fff;
             text-decoration: none;
             text-align: center;
@@ -98,7 +101,7 @@
 
         .mirror-button-onedrive:hover {
             background-color: #333;
-            outline: 2px solid blue;
+            outline: 2px solid var(--onedrive-color);
         }
     </style>
 </head>
