@@ -292,31 +292,34 @@
 
     </table>
     <!-- Add this inside your <body> before </body> -->
-<!-- Inside your <head> -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const themeToggle = document.getElementById('themeToggle');
-        const themeText = document.getElementById('themeText');
+        <!-- Inside your <head> -->
+        <!-- Inside your <head> -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeText = document.getElementById('themeText');
+            const body = document.body;
 
-        // Check the user's preference from localStorage
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-          document.documentElement.setAttribute('data-theme', currentTheme);
-          themeToggle.checked = currentTheme === 'light';
-          themeText.textContent = currentTheme === 'light' ? 'Light Mode' : 'Dark Mode';
-        }
+            // Check the user's preference from localStorage
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+              body.setAttribute('data-theme', currentTheme);
+              themeToggle.checked = currentTheme === 'light';
+              themeText.textContent = currentTheme === 'light' ? 'Light Mode' : 'Dark Mode';
+            }
 
-        // Toggle theme on checkbox change
-        themeToggle.addEventListener('change', function () {
-          const newTheme = themeToggle.checked ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', newTheme);
-          themeText.textContent = themeToggle.checked ? 'Light Mode' : 'Dark Mode';
+            // Toggle theme on checkbox change
+            themeToggle.addEventListener('change', function () {
+              const newTheme = themeToggle.checked ? 'light' : 'dark';
+              body.setAttribute('data-theme', newTheme);
+              themeText.textContent = themeToggle.checked ? 'Light Mode' : 'Dark Mode';
 
-          // Save the user's preference to localStorage
-          localStorage.setItem('theme', newTheme);
-        });
-      });
-    </script>
+              // Save the user's preference to localStorage
+              localStorage.setItem('theme', newTheme);
+            });
+          });
+        </script>
+
 
 
 </body>
