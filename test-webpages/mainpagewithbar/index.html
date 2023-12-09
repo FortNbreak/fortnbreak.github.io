@@ -8,6 +8,7 @@
         :root {
             --onedrive-color: rgb(20, 144, 223);
             --google-drive-color: rgb(15, 157, 88); /* big sad since i cannot use gradients :(*/
+            --links-down-color: rgb(237,52,25);
         }
         body {
             margin: 0;
@@ -125,8 +126,25 @@
             outline: 2px solid var(--google-drive-color);
         }
 
+        .mirror-button-linksdown {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 12px;
+            background: var(--links-down-color);
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, outline 0.3s;
+            outline: none;
+        }
+
+        .mirror-button-linksdown:hover {
+            background-color: #333;
+            outline: 2px solid var(--links-down-color);
+        }
         .mirror-button,
         .mirror-button-onedrive,
+        .mirror-button-linksdown,
         .mirror-button-gdrive {
             margin-bottom: 10px; /* Adjust the margin as needed */
         }
@@ -165,7 +183,7 @@
         <tbody>
             <tr>
                 <td>Slime Rancher</td>
-                <td>1 GB</td>
+                <td>Before: 500MB After: 1GB</td>
                 <td>
                     <div>
                         <img class="mirror-image" src="google-drive.webp" alt="Google Drive Logo">
@@ -178,9 +196,9 @@
                 </td>
             </tr>
             <tr>
-                <td>Game 2</td>
-                <td>1.5 GB</td>
-                <td>Mirror 1</td>
+                <td>Hello Neighbor</td>
+                <td>Before: 1.6GB After: 4.9GB</td>
+                <td>Mirrors Are Down, Please Try <a class="" href="https://fitgirl-repacks.site/"></td>
             </tr>
             <!-- Add more rows as needed -->
         </tbody>
