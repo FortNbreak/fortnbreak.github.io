@@ -15,12 +15,3 @@ body {
     color: transparent;
 }
 
-.subtitle {
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-    background: linear-gradient(to right, blue, yellow);
-    -webkit-background-clip: text;
-    color: transparent;
-}
