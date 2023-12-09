@@ -87,6 +87,32 @@
             cursor: pointer;
         }
 
+        table {
+            width: 75%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        th, td {
+            border: 1px solid; /* Remove the border color */
+            border-color: rgba(255, 255, 255, 0.5); /* Set the border color with alpha value for transparency */
+            padding: 8px;
+            text-align: left;
+        }
+
+        body[data-theme='light'] table {
+            background-color: transparent; /* Set the background color to transparent in light mode */
+            color: #000; /* Set text color to black only in light mode */
+        }
+
+        body[data-theme='dark'] table {
+            background-color: transparent; /* Set the background color to transparent in dark mode */
+            color: #fff; /* Set text color to white only in dark mode */
+        }
+
+
         .mirror-image {
             width: 20px; /* Adjust the width of the image */
             height: auto;
