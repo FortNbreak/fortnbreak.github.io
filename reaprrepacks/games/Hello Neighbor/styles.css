@@ -36,10 +36,6 @@ header a {
     margin: 0 15px;
 }
 
-rpinfo {
-  right: 30px;
-}
-
 body[data-theme='light'] table {
     background-color: transparent; /* Set the background color to transparent in light mode */
     color: #000; /* Set text color to black only in light mode */
