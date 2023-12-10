@@ -36,13 +36,12 @@ main {
   padding: 20px;
 }
 
-header .game-image {
-  height: 574px; /* Specify the height with the unit 'px' */
-  width: 430px;  /* Specify the width with the unit 'px' */
+.game-image {
+  width: 100%; /* Make the image fill its container */
+  max-width: 800px; /* Set a maximum width for the image */
+  margin: 20px auto; /* Center the image horizontally with margin */
   display: block; /* Remove any default inline spacing */
-  margin-right: 10px; /* Use margin instead of 'right' for spacing */
 }
-
 
 
 
