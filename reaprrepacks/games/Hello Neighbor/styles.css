@@ -20,7 +20,10 @@ header {
 }
 
 header img {
-  vertical-align: middle;
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 main {
