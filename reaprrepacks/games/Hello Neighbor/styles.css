@@ -36,6 +36,15 @@ main {
   padding: 20px;
 }
 
+.game-image {
+  height: 1148;
+  width:  860;
+  display: block; /* Remove any default inline spacing */
+  right: 40px;
+}
+
+
+
 body[data-theme='light'] table {
     background-color: transparent; /* Set the background color to transparent in light mode */
     color: #000; /* Set text color to black only in light mode */
@@ -46,7 +55,6 @@ body[data-theme='dark'] table {
     color: #fff; /* Set text color to white only in dark mode */
 }
 
-/* Add this inside your <style> */
 .theme-switch {
   position: absolute;
   top: 15px;
