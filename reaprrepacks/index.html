@@ -9,7 +9,7 @@
     <meta name="description" content="The Official Sites For Reapr Repacks"/>
     <meta name="og:description" content="The Official Sites For Reapr Repacks"/>
     <meta name="theme-color" content="#00ff46"/>
-    <title>RPRRPKS</title>
+    <title>Reapr Repacks</title>
 </head>
 <body>
 
@@ -19,10 +19,7 @@
             <a href="https://fortnbreak.github.io/reaprrepacks/">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-            <!-- Add more links as needed -->
-            <!-- Add this inside your <header> -->
         </nav>
-        <!-- Add this inside your <header> -->
         <div class="theme-switch">
           <label class="switch">
             <input type="checkbox" id="themeToggle">
@@ -34,8 +31,7 @@
     </header>
 
     <main>
-        <!-- Your page content goes here -->
-        <h1>Reapr Downloads</h1>
+        <h1>Reapr's Repacks</h1>
         <p>THE ONLY OFFICIAL SITE FOR REAPR REPACKS</p>
     </main>
 
@@ -47,8 +43,6 @@
                 <th>Mirrors</th>
             </tr>
         </thead>
-        <!-- Previous code... -->
-
         <tbody>
             <tr>
                 <td>Slime Rancher</td>
@@ -73,22 +67,14 @@
                     </div>
                 </td>
             </tr>
-            <!-- Add more rows as needed -->
         </tbody>
-
-        <!-- Next part of the code... -->
-
     </table>
-    <!-- Add this inside your <body> before </body> -->
-        <!-- Inside your <head> -->
-        <!-- Inside your <head> -->
         <script>
           document.addEventListener('DOMContentLoaded', function () {
             const themeToggle = document.getElementById('themeToggle');
             const themeText = document.getElementById('themeText');
             const body = document.body;
 
-            // Check the user's preference from localStorage
             const currentTheme = localStorage.getItem('theme');
             if (currentTheme) {
               body.setAttribute('data-theme', currentTheme);
@@ -96,19 +82,14 @@
               themeText.textContent = currentTheme === 'light' ? 'Light Mode' : 'Dark Mode';
             }
 
-            // Toggle theme on checkbox change
             themeToggle.addEventListener('change', function () {
               const newTheme = themeToggle.checked ? 'light' : 'dark';
               body.setAttribute('data-theme', newTheme);
               themeText.textContent = themeToggle.checked ? 'Light Mode' : 'Dark Mode';
 
-              // Save the user's preference to localStorage
               localStorage.setItem('theme', newTheme);
             });
           });
         </script>
-
-
-
 </body>
 </html>
