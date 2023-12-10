@@ -1,6 +1,7 @@
 :root {
     --onedrive-color: rgb(20, 144, 223);
-    --google-drive-color: rgb(15, 157, 88); /* big sad since i cannot use gradients :(*/
+    --google-drive-color: rgb(15, 157, 88);
+    --qiwi-color: rgb(148, 135, 251);
     --links-down-color: rgb(237,52,25);
 }
 
@@ -162,6 +163,23 @@ body[data-theme='dark'] table {
 .mirror-button-gdrive:hover {
     background-color: #333;
     outline: 2px solid var(--google-drive-color);
+}
+
+.mirror-button-qiwi {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: var(--qiwi-color);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, outline 0.3s;
+    outline: none;
+}
+
+.mirror-button-qiwi:hover {
+    background-color: #333;
+    outline: 2px solid var(--qiwi-color);
 }
 
 .mirror-button-linksdown {
