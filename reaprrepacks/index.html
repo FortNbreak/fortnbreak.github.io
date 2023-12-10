@@ -56,6 +56,10 @@
                         <img class="mirror-image" src="onedrive.png" alt="Onedrive Logo">
                         <a class="mirror-button-onedrive" href="https://1drv.ms/f/s!ApPFHvkg8Mjra9B3jjxijg9U_oI?e=g6wTvV" target="_blank">Onedrive</a>
                     </div>
+                    <div>
+                        <img class="mirror-image" src="qiwi.png" alt="Qiwi Logo">
+                        <a class="mirror-button-qiwi" href="#" target="_blank">Qiwi (Uploading)</a>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -69,27 +73,28 @@
             </tr>
         </tbody>
     </table>
-        <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const themeToggle = document.getElementById('themeToggle');
-            const themeText = document.getElementById('themeText');
-            const body = document.body;
+    <h3>Coming Soon: Beat Saber [Reapr Repack]</h3>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const themeToggle = document.getElementById('themeToggle');
+        const themeText = document.getElementById('themeText');
+        const body = document.body;
 
-            const currentTheme = localStorage.getItem('theme');
-            if (currentTheme) {
-              body.setAttribute('data-theme', currentTheme);
-              themeToggle.checked = currentTheme === 'light';
-              themeText.textContent = currentTheme === 'light' ? 'Light Mode' : 'Dark Mode';
-            }
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            body.setAttribute('data-theme', currentTheme);
+            themeToggle.checked = currentTheme === 'light';
+            themeText.textContent = currentTheme === 'light' ? 'Light Mode' : 'Dark Mode';
+        }
 
-            themeToggle.addEventListener('change', function () {
-              const newTheme = themeToggle.checked ? 'light' : 'dark';
-              body.setAttribute('data-theme', newTheme);
-              themeText.textContent = themeToggle.checked ? 'Light Mode' : 'Dark Mode';
+        themeToggle.addEventListener('change', function () {
+            const newTheme = themeToggle.checked ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            themeText.textContent = themeToggle.checked ? 'Light Mode' : 'Dark Mode';
 
-              localStorage.setItem('theme', newTheme);
-            });
-          });
-        </script>
+            localStorage.setItem('theme', newTheme);
+        });
+        });
+    </script>
 </body>
 </html>
