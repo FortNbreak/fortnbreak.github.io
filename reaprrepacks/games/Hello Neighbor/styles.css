@@ -20,23 +20,12 @@ header {
 }
 
 header img {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
   vertical-align: middle;
 }
 
 main {
   padding: 20px;
 }
-
-.game-image {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  display: block;
-}
-
 
 header a {
     color: #fff;
@@ -49,10 +38,7 @@ main {
 }
 
 .game-image {
-  width: 100%; /* Make the image fill its container */
-  max-width: 800px; /* Set a maximum width for the image */
   margin: 20px auto; /* Center the image horizontally with margin */
-  display: block; /* Remove any default inline spacing */
 }
 
 
