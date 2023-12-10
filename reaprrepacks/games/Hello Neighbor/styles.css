@@ -36,8 +36,8 @@ header a {
     margin: 0 15px;
 }
 
-main {
-  padding: 20px;
+rpinfo {
+  right: 30px;
 }
 
 body[data-theme='light'] table {
