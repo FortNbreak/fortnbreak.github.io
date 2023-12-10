@@ -37,12 +37,6 @@ main {
   padding: 20px;
 }
 
-.game-image {
-  margin: 20px auto; /* Center the image horizontally with margin */
-}
-
-
-
 body[data-theme='light'] table {
     background-color: transparent; /* Set the background color to transparent in light mode */
     color: #000; /* Set text color to black only in light mode */
