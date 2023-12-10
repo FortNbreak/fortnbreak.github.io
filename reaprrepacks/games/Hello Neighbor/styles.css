@@ -37,10 +37,10 @@ main {
 }
 
 .game-image {
-  height: 1148;
-  width:  860;
+  height: 574;
+  width:  430;
   display: block; /* Remove any default inline spacing */
-  right: 40px;
+  right: 10px;
 }
 
 
