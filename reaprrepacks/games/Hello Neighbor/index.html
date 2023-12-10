@@ -4,21 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <!-- Add other meta tags or links here -->
-    <title>Hello Neighbor - Reapr Repacks</title>
+    <meta property="og:type" content="website"/>
+    <meta name="og:title" content="Reapr Repacks - Official Site"/>
+    <meta name="description" content="The Official Sites For Reapr Repacks"/>
+    <meta name="og:description" content="The Official Sites For Reapr Repacks"/>
+    <meta name="theme-color" content="#00ff46"/>
+    <title>RPRRPKS</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Game Page</h1>
-    </div>
-    
-    <div class="game-content">
-        <img src="path/to/your/game-image.jpg" alt="Game Image" class="game-image">
-        <!-- Add other game-related content here -->
-    </div>
 
-    <div class="footer">
-        <p>&copy; 2023 Your Website</p>
-    </div>
+    <header>
+        <img src="../../logo.png" alt="Reapr RPKS Logo">
+        <nav>
+            <a href="https://fortnbreak.github.io/reaprrepacks/">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <!-- Add more links as needed -->
+            <!-- Add this inside your <header> -->
+        </nav>
+        <!-- Add this inside your <header> -->
+        <div class="theme-switch">
+          <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider round"></span>
+          </label>
+          <span id="themeText">Dark</span>
+        </div>
+
+    </header>
+
+    <main>
+        <!-- Your page content goes here -->
+        <h1>Hello Neighbor</h1>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeText = document.getElementById('themeText');
+            const body = document.body;
+
+            // Check the user's preference from localStorage
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+              body.setAttribute('data-theme', currentTheme);
+              themeToggle.checked = currentTheme === 'light';
+              themeText.textContent = currentTheme === 'light' ? 'Light Mode' : 'Dark Mode';
+            }
+
+            // Toggle theme on checkbox change
+            themeToggle.addEventListener('change', function () {
+              const newTheme = themeToggle.checked ? 'light' : 'dark';
+              body.setAttribute('data-theme', newTheme);
+              themeText.textContent = themeToggle.checked ? 'Light Mode' : 'Dark Mode';
+
+              // Save the user's preference to localStorage
+              localStorage.setItem('theme', newTheme);
+            });
+          });
+    </script>
+
+
+
 </body>
 </html>
