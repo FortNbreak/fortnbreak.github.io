@@ -102,6 +102,8 @@
     </table>
     <h3>Coming Soon: Beat Saber [Reapr Repack]</h3>
     <h4>I am pretty new to repacking but I found it pretty cool so I gave it a shot :)</h4>
+
+    <!-- Light/Dark Mode Script by FortNbreak -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
         const themeToggle = document.getElementById('themeToggle');
@@ -124,5 +126,31 @@
         });
         });
     </script>
+    
+    <!-- Search Bar Script by FortNbreak -->
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0]; 
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    
 </body>
 </html>
