@@ -298,6 +298,7 @@ input:checked + .slider:before {
   width: 60%; 
   box-sizing: border-box;
   margin-bottom: 20px;
+  margin: 0px auto;
 }
 
 .search-bar input {
