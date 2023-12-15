@@ -288,3 +288,28 @@ input:checked + .slider:before {
   margin-left: 10px;
   color: #fff;
 }
+
+
+/* New Search Bar (TESTING) */
+.search-bar {
+  border: 2px solid limegreen; 
+  border-radius: 20px; 
+  padding: 8px; 
+  width: 100%; 
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border: none; 
+  background-color: transparent; 
+  color: #fff; 
+  outline: none; 
+}
+
+.search-bar input::placeholder {
+  color: #ddd; 
+}
