@@ -292,7 +292,8 @@ input:checked + .slider:before {
 
 /* New Search Bar (TESTING) */
 .search-bar {
-  border: 2px solid limegreen; 
+  border: 2px solid transparent;  
+  transition: border-color 0.3s;  
   border-radius: 20px; 
   padding: 8px; 
   width: 60%; 
@@ -302,6 +303,7 @@ input:checked + .slider:before {
 }
 
 .search-bar input {
+  border-color: limegreen;  
   width: 100%;
   box-sizing: border-box;
   text-align: center;
