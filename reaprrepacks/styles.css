@@ -290,10 +290,11 @@ input:checked + .slider:before {
 }
 
 
+
 /* New Search Bar (TESTING) */
 .search-bar {
   border: 2px solid transparent;  
-  transition: border-color 0.3s;  
+  transition: border-color 0.3s ease;  
   border-radius: 20px; 
   padding: 8px; 
   width: 60%; 
@@ -303,7 +304,6 @@ input:checked + .slider:before {
 }
 
 .search-bar input {
-  border-color: limegreen;  
   width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -311,8 +311,16 @@ input:checked + .slider:before {
   background-color: transparent; 
   color: #fff; 
   outline: none; 
+  border-color: limegreen;  
 }
 
 .search-bar input::placeholder {
   color: #ddd; 
 }
+
+.search-bar:hover input,
+.search-bar input:focus {
+  border-color: limegreen;  
+}
+
+
