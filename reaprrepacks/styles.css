@@ -311,16 +311,16 @@ input:checked + .slider:before {
   background-color: transparent; 
   color: #fff; 
   outline: none; 
-  border-color: limegreen;  
 }
 
 .search-bar input::placeholder {
   color: #ddd; 
 }
 
-.search-bar:hover input,
-.search-bar input:focus {
-  border-color: limegreen;  
+.search-bar:hover,
+.search-bar:focus-within {
+  border-color: limegreen;  /* Set the border color to limegreen on hover and when focused */
 }
+
 
 
