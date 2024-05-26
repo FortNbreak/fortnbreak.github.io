@@ -1,0 +1,29 @@
+.iconContainer__9f124, .icon__5c8c7 { 
+  width: 21px;
+  height: 21px;
+  color: var(--interactive-normal);
+  transition: ease-in-out .3s;
+}
+
+.searchBar__5a20a { 
+  width: 21px;
+  height: 24px;
+  padding: 0;
+  background: none;
+  transition: ease-in-out 0.3s!important;
+}
+
+.searchBar__5a20a:hover .iconContainer__9f124,
+.searchBar__5a20a:hover .icon__5c8c7,
+.focused__037a4 .icon__5c8c7,
+.focused__037a4 .iconContainer__9f124 { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.searchBar__5a20a:hover,
+.focused__037a4 .searchBar__5a20a, .open_d3ab4e .searchBar__5a20a  { 
+  width: 175px;
+  background: var(--background-tertiary);
+  border: 1px solid var(--button-outline-primary-border-hover);
+}
