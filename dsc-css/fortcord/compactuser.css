@@ -1,0 +1,26 @@
+.container_debb33 .hovered__5a165::before{
+  content: "@";
+}
+
+.panels__58331 > .container_debb33 .flex_f18b02 > :not(:last-child) {
+  opacity: 0% !important;
+  width: 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.panels__58331 > .container_debb33 .flex_f18b02:hover > :not(:last-child) {
+  opacity: 100% !important;
+  width: 32px;
+}
+
+.avatarWrapper__500a6{
+  transition: all 0.3s ease-in-out;
+  width: 100%!important;
+  margin-left: -10px;
+  height: 53px;
+  border-radius: 0!important;
+}
+
+.avatarWrapper__500a6 .avatar_f8541f{
+  margin-left: 10px;
+}
