@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortNbreak</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            overflow: visible;
+            color: #fff;
+        }
+
+        body {
+            background: radial-gradient(circle at center, #1a1a40, #000) no-repeat;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px; 
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px white;
+            animation: fade 3s infinite ease-in-out;
+        }
+
+        @keyframes fade {
+            0% { 
+                opacity: 0;
+                box-shadow: 0 0 0 transparent; 
+            }
+            50% { 
+                opacity: 1;
+                box-shadow: 0 0 5px white; 
+            }
+            100% { 
+                opacity: 0; 
+                box-shadow: 0 0 0 transparent; 
+            }
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ff4500; 
+            background-image: url('assets/profile.jpg'); 
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .logo-text {
+            margin: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .description {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: 400; 
+            text-align: center;
+            color: #cccccc; 
+            z-index: 1;
+        }
+
+        .separator {
+            width: 60%;
+            height: 2px;
+            background-color: #ff4500; 
+            margin: 20px 0;
+            z-index: 1;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative; 
+            overflow: visible; 
+            z-index: 1;
+        }
+
+        .link-button {
+            padding: 15px;
+            width: 220px; 
+            text-align: center;
+            border: none;
+            border-radius: 50px; 
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg, #ff4500, #ff6f00);
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.8); 
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; 
+            cursor: pointer;
+            overflow: hidden;
+            opacity: 1; 
+        }
+
+        .link-button:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 0 25px rgba(255, 69, 0, 1); 
+            background: linear-gradient(45deg, #ff6f00, #ff4500); 
+            opacity: 1; 
+        }
+
+        .youtube {
+            background: linear-gradient(45deg, red, darkred); 
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+        }
+
+        .github {
+            background: linear-gradient(45deg, #24292e, #6e7681); 
+            box-shadow: 0 0 15px rgba(36, 41, 46, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="profile-picture" id="Profile Picture:centered"></div>
+
+    <div class="logo-text">FortNbreak</div>
+
+    <div class="description">Hi, I'm FortNbreak. I am a full-stack developer and work in many languages.</div>
+
+    <div class="separator"></div>
+
+    <div class="links">
+        <button class="link-button youtube" onclick="window.open('https://www.youtube.com/@FortNbreak', '_blank')">YouTube</button>
+        <button class="link-button github" onclick="window.open('https://www.github.com/FortNbreak/', '_blank')">GitHub</button>
+    </div>
+
+    <script>
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 120; i++) { 
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            const randomDelay = Math.random() * 3;
+            star.style.animationDelay = `${randomDelay}s`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>
