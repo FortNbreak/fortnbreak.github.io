@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLPs | FortNbreak</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .flp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .flp-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255, 45, 45, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .flp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 45, 45, 0.2);
+            border-color: rgba(255, 45, 45, 0.4);
+        }
+
+        .flp-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .flp-header i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .flp-header h2 {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 1.3rem;
+        }
+
+        .flp-version {
+            background: rgba(255, 45, 45, 0.2);
+            color: var(--primary-color);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .flp-preview {
+            position: relative;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .flp-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .flp-bpm {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--primary-color);
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .flp-requirements {
+            margin: 20px 0;
+        }
+
+        .flp-requirements h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .requirement {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .requirement i {
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .req-content {
+            flex: 1;
+        }
+
+        .req-title {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .req-value {
+            color: rgba(255,255,255,0.8);
+            font-family: monospace;
+        }
+
+        .vst-list {
+            margin: 5px 0 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .vst-list li {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vst-list li i {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .download-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../assets/logo.png" alt="FortNbreak Logo" class="logo-icon">
+            </div>
+            <ul class="navbar-links">
+                <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="../serum-banks"><i class="fas fa-music"></i> Serum Banks</a></li>
+                <li class="active"><a href="./"><i class="fas fa-sliders-h"></i> FLPs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>FL Studio Projects</h1>
+                <p class="subtitle">My FL Studio project files.</p>
+            </div>
+            <div class="hero-image">
+                <div class="gradient-circle"></div>
+                <div class="gradient-circle"></div>
+            </div>
+        </section>
+
+        <section class="flp-grid">
+            <div class="flp-card">
+                <div class="flp-header">
+                    <i class="fas fa-sliders-h"></i>
+                    <h2>Juice WRLD - Empty FLP</h2>
+                </div>
+                
+                <div class="flp-preview">
+                    <img src="../assets/drfl.jpg" alt="Death Race For Love Preview">
+                    <div class="flp-bpm">
+                        155 BPM
+                    </div>
+                </div>
+                
+                <div class="flp-requirements">
+                    <h4><i class="fas fa-cogs"></i> Requirements</h4>
+                    <div class="requirement">
+                        <i class="fas fa-flask"></i>
+                        <div class="req-content">
+                            <span class="req-title">FL Studio Version</span>
+                            <span class="req-value">24.2.2 or higher</span>
+                        </div>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-memory"></i>
+                        <div class="req-content">
+                            <span class="req-title">RAM</span>
+                            <span class="req-value">8GB minimum</span>
+                        </div>
+                    </div>
+                    <div class="requirement">
+                        <i class="fas fa-plug"></i>
+                        <div class="req-content">
+                            <span class="req-title">Required VSTs</span>
+                            <ul class="vst-list">
+                                <li><i class="fas fa-check"></i> Keyscape</li>
+                                <li><i class="fas fa-check"></i> Electra2</li>
+                                <li><i class="fas fa-check"></i> Kontakt (and Output Exhale Library)</li>
+                                <li><i class="fas fa-check"></i> RC-20 Retro Color</li>
+                                <li><i class="fas fa-check"></i> Valhalla Vintage Verb</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="../downloads/flps/juice-wrld-empty/Empty FLP.rar" class="download-btn">
+                    <i class="fas fa-download"></i> Download FLP (65.0MB)
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 FortNbreak. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const flpCards = document.querySelectorAll('.flp-card');
+        flpCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const tiltX = (y - centerY) / -20;
+                const tiltY = (centerX - x) / -20;
+                
+                card.style.setProperty('--tilt-x', `${tiltY}deg`);
+                card.style.setProperty('--tilt-y', `${tiltX}deg`);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--tilt-x', '0deg');
+                card.style.setProperty('--tilt-y', '0deg');
+            });
+        });
+    </script>
+</body>
+</html>

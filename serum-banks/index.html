@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serum Banks | FortNbreak</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../assets/logo.png" alt="FortNbreak Logo" class="logo-icon">
+            </div>
+            <ul class="navbar-links">
+                <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li class="active"><a href="./"><i class="fas fa-music"></i> Serum Banks</a></li>
+                <li><a href="../flps"><i class="fas fa-sliders-h"></i> FLPs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Serum Banks</h1>
+                <p class="subtitle">My presets for Xfer Serum</p>
+            </div>
+            <div class="hero-image">
+                <div class="gradient-circle"></div>
+                <div class="gradient-circle"></div>
+            </div>
+        </section>
+
+        <section class="bank-grid">
+            <div class="bank-card">
+                <div class="bank-header">
+                    <h2>Wormhole</h2>
+                    <span class="bank-version">v1.0</span>
+                </div>
+                <img src="../assets/wormhole_preview.png" alt="Wormhole Preview" class="bank-preview">
+                <div class="bank-details">
+                    <p><i class="fas fa-fire"></i> 21 presets</p>
+                    <p><i class="fas fa-tags"></i> Yeat, and Ken Carson-like presets</p>
+                    <p><i class="fas fa-star"></i> 5 Leads, 1 Pad, 6 Plucks, 9 Synths</p>
+                </div>
+                <a href="../downloads/serum-banks/FNB - Wormhole Serum Bank.rar" class="download-btn">
+                    <i class="fas fa-download"></i> Download [1.6MB]
+                </a>
+            </div>
+
+            <div class="bank-card coming-soon">
+                <div class="bank-header">
+                    <h2>More Banks Coming Soon</h2>
+                </div>
+                <div class="bank-details">
+                    <p></i>New banks in development</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FortNbreak. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const banks = document.querySelectorAll('.bank-card:not(.coming-soon)');
+        banks.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const tiltX = (y - centerY) / -20;
+                const tiltY = (centerX - x) / -20;
+                
+                card.style.setProperty('--tilt-x', `${tiltY}deg`);
+                card.style.setProperty('--tilt-y', `${tiltX}deg`);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--tilt-x', '0deg');
+                card.style.setProperty('--tilt-y', '0deg');
+            });
+        });
+    </script>
+</body>
+</html>

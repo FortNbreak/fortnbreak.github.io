@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your GitHub Pages Site</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="assets/logo.png" alt="Your Logo" class="logo-icon">            </div>
+            <ul class="navbar-links">
+                <li class="active"><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="projects/"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="serum-banks/"><i class="fas fa-music"></i> Serum Banks</a></li>
+                <li><a href="flps/"><i class="fas fa-sliders-h"></i> FLPs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Website</h1>
+                <p class="subtitle">Explore my projects, music resources, and FL Studio projects</p>
+            </div>
+            <div class="hero-image">
+                <div class="gradient-circle"></div>
+                <div class="gradient-circle"></div>
+            </div>
+        </section>
+
+        <section class="features">
+            <a href="projects/" class="feature-card">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Projects</h3>
+                <p>All of my coding projects</p>
+            </a>
+            <a href="serum-banks/" class="feature-card">
+                <i class="fas fa-music"></i>
+                <h3>Serum Banks</h3>
+                <p>My preset banks for Xfer Serum</p>
+            </a>
+            <a href="flps/" class="feature-card">
+                <i class="fas fa-sliders-h"></i>
+                <h3>FLPs</h3>
+                <p>My FL Studio project files</p>
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FortNbreak. All rights reserved.</p>
+    </footer>
+<script>
+    const cards = document.querySelectorAll('.feature-card');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const tiltX = (y - centerY) / -20;
+            const tiltY = (centerX - x) / -20;
+            
+            card.style.setProperty('--tilt-x', `${tiltY}deg`);
+            card.style.setProperty('--tilt-y', `${tiltX}deg`);
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--tilt-x', '0deg');
+            card.style.setProperty('--tilt-y', '0deg');
+        });
+    });
+</script>
+</body>
+</html>

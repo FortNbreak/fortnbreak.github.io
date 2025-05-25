@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | FortNbreak</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <img src="../assets/logo.png" alt="FortNbreak Logo" class="logo-icon">
+            </div>
+            <ul class="navbar-links">
+                <li><a href="../"><i class="fas fa-home"></i> Home</a></li>
+                <li class="active"><a href="../projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="../serum-banks"><i class="fas fa-music"></i> Serum Banks</a></li>
+                <li><a href="../flps"><i class="fas fa-sliders-h"></i> FLPs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Projects</h1>
+                <p class="subtitle">Projects I am currently working on.</p>
+            </div>
+            <div class="hero-image">
+                <div class="gradient-circle"></div>
+                <div class="gradient-circle"></div>
+            </div>
+        </section>
+
+        <section class="project-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fab fa-windows"></i>
+                    <h2>QuickMD5</h2>
+                    <div class="project-meta">
+                        <span class="project-lang">C#</span>
+                        <span class="project-version">0.5.0-beta</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>12.5x faster</strong>
+                                <span>vs PowerShell (16 threads)</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <strong>2.4GB/s</strong>
+                                <span>NVMe throughput</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-desc">
+                        <p>Multi-threaded MD5 Hash checker built for blazingly fast hash checking</p>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/FortNbreak/QuickMD5/releases/download/beta-0.5.0/QuickMD5_x64.exe" class="project-link" target="_blank">
+                        <i class="fas fa-download"></i> Download
+
+                    </a>
+                    <a href="https://github.com/FortNbreak/QuickMD5" class="project-link" target="_blank">
+                        <i class="fas fa-code"></i> Source
+                    </a>
+
+                    <div class="project-size">
+                        <i class="fas fa-hdd"></i> 1.2MB
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <i class="fab fa-windows"></i>
+                    <h2>Plauri</h2>
+                    <div class="project-meta">
+                        <span class="project-lang">Rust</span>
+                        <span class="project-version">0.1.0</span>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-weight"></i>
+                            <div>
+                                <strong>8.77MB</strong>
+                                <span>97.8% smaller</span>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-memory"></i>
+                            <div>
+                                <strong>400MB RAM</strong>
+                                <span>idle usage</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-desc">
+                        <p>Lightweight Plex client for low-end hardware</p>
+                        <div class="features">
+                            <span>72% less RAM</span>
+                            <span>71% lower GPU</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/FortNbreak/Plauri/releases/download/release-0.1.0/Plauri_0.1.0_x64_en-US.msi" class="project-link" target="_blank">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                    <a href="https://github.com/FortNbreak/Plauri/" class="project-link" target="_blank">
+                        <i class="fas fa-code"></i> Source
+                    </a>
+                    <div class="project-size">
+                        <i class="fas fa-hdd"></i> 8.77MB
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 FortNbreak. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .project-meta {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-version {
+            background: rgba(255,255,255,0.1);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-family: monospace;
+        }
+        
+        .project-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .stat i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        .stat strong {
+            display: block;
+            font-size: 1.1rem;
+        }
+        
+        .stat span {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .requirements {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+        }
+        
+        .features {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .features span {
+            background: rgba(255,45,45,0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+    </style>
+
+    <script>
+        const projects = document.querySelectorAll('.project-card');
+        projects.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const tiltX = (y - centerY) / -20;
+                const tiltY = (centerX - x) / -20;
+                
+                card.style.setProperty('--tilt-x', `${tiltY}deg`);
+                card.style.setProperty('--tilt-y', `${tiltX}deg`);
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.setProperty('--tilt-x', '0deg');
+                card.style.setProperty('--tilt-y', '0deg');
+            });
+        });
+    </script>
+</body>
+</html>
